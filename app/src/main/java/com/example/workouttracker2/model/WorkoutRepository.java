@@ -25,6 +25,14 @@ public class WorkoutRepository {
         AppDatabase.databaseWriteExecutor.execute(() -> exerciseDao.insert(exercise));
     }
 
+    public void delete(Workout workout) {
+        AppDatabase.databaseWriteExecutor.execute(() -> workoutDao.delete(workout));
+    }
+
+    public void delete(Exercise exercise) {
+        AppDatabase.databaseWriteExecutor.execute(() -> exerciseDao.delete(exercise));
+    }
+
     public LiveData<List<Workout>> getAllWorkouts() {
         return allWorkouts;
     }
