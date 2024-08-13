@@ -57,7 +57,7 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
         notifyDataSetChanged();
     }
 
-    class WorkoutViewHolder extends RecyclerView.ViewHolder {
+    static class WorkoutViewHolder extends RecyclerView.ViewHolder {
         private TextView textViewWorkoutName;
         Button buttonDelete;
 

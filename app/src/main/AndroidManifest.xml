@@ -16,6 +16,9 @@
             android:name=".view.WorkoutViewActivity"
             android:exported="false" />
         <activity
+            android:name=".view.ChooseExerciseActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.MainActivity"
             android:exported="true">
             <intent-filter>
