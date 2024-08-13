@@ -33,11 +33,15 @@ public class WorkoutRepository {
         AppDatabase.databaseWriteExecutor.execute(() -> exerciseDao.delete(exercise));
     }
 
+    public void updateExerciseWeight(int exerciseId, double newWeight) {
+        AppDatabase.databaseWriteExecutor.execute(() -> exerciseDao.updateExerciseWeight(exerciseId, newWeight));
+    }
+
     public LiveData<List<Workout>> getAllWorkouts() {
         return allWorkouts;
     }
 
-    public List<Exercise> getExercisesForWorkout(int workoutId) {
+    public LiveData<List<Exercise>> getExercisesForWorkout(int workoutId) {
         return exerciseDao.getExercisesForWorkout(workoutId);
     }
 }

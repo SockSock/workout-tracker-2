@@ -39,7 +39,11 @@ public class WorkoutViewModel extends AndroidViewModel {
         return allWorkouts;
     }
 
-    public List<Exercise> getExercisesForWorkout(int workoutId) {
+    public LiveData<List<Exercise>> getExercisesForWorkout(int workoutId) {
         return repository.getExercisesForWorkout(workoutId);
+    }
+
+    public void updateExerciseWeight(int exerciseId, double newWeight) {
+        repository.updateExerciseWeight(exerciseId, newWeight);
     }
 }

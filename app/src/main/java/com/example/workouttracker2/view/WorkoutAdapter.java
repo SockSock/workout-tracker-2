@@ -1,5 +1,6 @@
 package com.example.workouttracker2.view;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,13 @@ public class WorkoutAdapter extends RecyclerView.Adapter<WorkoutAdapter.WorkoutV
         Workout currentWorkout = workouts.get(position);
         holder.textViewWorkoutName.setText(currentWorkout.getName());
         holder.buttonDelete.setOnClickListener(v -> viewModel.delete(currentWorkout));
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(holder.itemView.getContext(), WorkoutViewActivity.class);
+            intent.putExtra("WORKOUT_ID", currentWorkout.getId());
+
+            holder.itemView.getContext().startActivity(intent);
+        });
     }
 
     @Override
