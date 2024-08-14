@@ -89,7 +89,7 @@ public class ChooseExerciseAdapter extends RecyclerView.Adapter<ChooseExerciseAd
                 double weight = Double.parseDouble(weightInput);
                 double increment = Double.parseDouble(incrementInput);
 
-                Exercise newExercise = new Exercise(exerciseName, sets, reps, weight, increment, workoutId);
+                Exercise newExercise = new Exercise(exerciseName, reps, sets, weight, increment, workoutId);
                 viewModel.insert(newExercise);
 
                 dialog.dismiss();

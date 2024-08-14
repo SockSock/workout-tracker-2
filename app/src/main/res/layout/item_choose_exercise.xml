@@ -15,4 +15,4 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:padding="8dp"/>
-    </LinearLayout>
+</LinearLayout>
